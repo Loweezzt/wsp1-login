@@ -11,5 +11,10 @@ router.get("/", (req, res) => {
 router.get('/error', (req, res) => {
     throw new Error('Test error')
 })
+router.get("/login", (req, res) => {
+    res.render("login.njk",
+        { title: "Login" }
+    )
+})
 
 export default router
